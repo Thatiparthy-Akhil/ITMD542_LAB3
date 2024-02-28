@@ -1,0 +1,148 @@
+/* Style for Links */
+* {
+  text-align: center;
+  background-color: #ddd;
+}
+
+a.btn-link {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 8px;
+  background: linear-gradient(to bottom, #4caf50, #388e3c); /* Green gradient */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Style for Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: linear-gradient(to bottom, #4caf50, #388e3c); /* Green gradient */
+  color: #0d0d0d;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #070707;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* Style for View Button */
+a.btn-view {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(to bottom, #3a21f3, #3c1ee5); /* Blue gradient for View button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Style for Edit Button */
+a.btn-edit {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(to bottom, #ea00ff, #f500d0); /* Orange gradient for Edit button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Style for Delete Button */
+button.btn-delete {
+  padding: 7px 10px;
+  background: linear-gradient(to bottom, #d8f436, #afd32f); /* Red gradient for Delete button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Styles for Add Contact Page */
+.add-contact-container form button[type='submit'],
+.add-contact-container form a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #f38a21, #e5a31e); /* Blue gradient */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-contact-container form button[type='submit']:hover,
+.add-contact-container form a:hover {
+  background: linear-gradient(to bottom, #1ea9e5, #6215c0); /* Darker blue gradient on hover */
+}
+
+/* Styles for Confirm Delete Page */
+.confirm-delete-container form button[type='submit'],
+.confirm-delete-container form a {
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #f44336, #d32f2f); /* Red gradient for Confirm Delete button */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-delete-container form button[type='submit']:hover,
+.confirm-delete-container form a:hover {
+  background: linear-gradient(to bottom, #d32f2f, #b71c1c); /* Darker red gradient on hover */
+}
+
+/* Styles for Contact Details Page */
+.contact-details-container .container button.btn-delete,
+.contact-details-container .container a.btn-edit {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #2196f3, #1e88e5); /* Blue gradient */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-details-container .container button.btn-delete:hover,
+.contact-details-container .container a.btn-edit:hover {
+  background: linear-gradient(to bottom, #1e88e5, #1565c0); /* Darker blue gradient on hover */
+}
+
+/* Styles for Edit Contact Page */
+.edit-container form button[type='submit'],
+.edit-container form a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #2196f3, #1e88e5); /* Blue gradient */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-container form button[type='submit']:hover,
+.edit-container form a:hover {
+  background: linear-gradient(to bottom, #1e88e5, #1565c0); /* Darker blue gradient on hover */
+}
+
+.edit-container .redtext {
+  color: red;
+}
