@@ -24,7 +24,7 @@ const contactRepo = {
         const row = stmt.get(id);
 
         return new Contact(row.id,row.contactFirstName,row.contactLastName,row.contactEmailAddress,row.contactNotes,row.contactCreatedDateTime,row.contactLastEditedDateTime);
-        
+ 
     },  
     create: (contact) => {
 
