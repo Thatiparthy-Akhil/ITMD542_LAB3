@@ -24,15 +24,16 @@ const contactRepo = {
         const row = stmt.get(id);
 
         return new Contact(row.id,row.contactFirstName,row.contactLastName,row.contactEmailAddress,row.contactNotes,row.contactCreatedDateTime,row.contactLastEditedDateTime);
- 
+        
     },  
+
     create: (contact) => {
-
         const stmt = db.prepare("INSERT INTO contacts (contactFirstName, contactLastName, contactEmailAddress, contactNotes) VALUES (?,?,?,?)");
-        const createContactResult = stmt.run(contact.contactFirstName, contact.contactLastName, contact.contactEmailAddress, contact.contactNotes);
+        const createContactResult = stmt.run(contact.firstName, contact.lastName, contact.emailAddress, contact.notes);
         console.log(`contact created with id:${createContactResult.lastInsertRowid}`); 
-
     },
+    
+    
     deleteById: (id) => {
 
         const stmt = db.prepare("DELETE FROM contacts WHERE id= ?");;
@@ -41,29 +42,34 @@ const contactRepo = {
 
     },
     update: (contact) => {
-        const stmt = db.prepare(`
-            UPDATE contacts 
-            SET 
-                contactFirstName = ?,
-                contactLastName = ?,
-                contactEmailAddress = ?,
-                contactNotes = ?,
-                contactLastEditedDateTime = ? 
-            WHERE 
-                id = ?`
-        );
-        
-        const result = stmt.run(
-            contact.contactFirstName,
-            contact.contactLastName,
-            contact.contactEmailAddress,
-            contact.contactNotes,
-            contact.contactLastEditedDateTime,
-            contact.id
-        );
-
-        console.log(`rows updated:  ${result.changes}`);
+        try {
+            const stmt = db.prepare(`
+                UPDATE contacts 
+                SET 
+                    contactFirstName = ?,
+                    contactLastName = ?,
+                    contactEmailAddress = ?,
+                    contactNotes = ?,
+                    contactLastEditedDateTime = ? 
+                WHERE 
+                    id = ?`
+            );
+    
+            const updateContactResult = stmt.run(
+                contact.contactFirstName,
+                contact.contactLastName,
+                contact.contactEmailAddress,
+                contact.contactNotes,
+                contact.contactLastEditedDateTime,
+                contact.id
+            );
+    
+            console.log(`rows updated:  ${updateContactResult.changes}`);
+        } catch (error) {
+            console.error("Error updating contact:", error);
+        }
     }
+    
 };
 
 module.exports = contactRepo;

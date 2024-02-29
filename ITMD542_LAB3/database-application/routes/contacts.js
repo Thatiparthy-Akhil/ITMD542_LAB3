@@ -71,17 +71,17 @@ router.post('/:id/edit', function(req, res, next) {
   } else {
     const updatedContact = {
       id: req.params.id,
-      firstName: firstName,
-      lastName: lastName,
-      emailAddress: emailAddress || '',
-      notes: notes || '',
-      createdDateTime: contactsRepo.findById(req.params.id).createdDateTime, // Retain original creation date/time
-      lastEditedDateTime: new Date().toISOString() // Current date/time
+      contactFirstName: firstName,
+      contactLastName: lastName,
+      contactEmailAddress: emailAddress || '',
+      contactNotes: notes || '',
+      contactLastEditedDateTime: new Date().toISOString() // Current date/time
     };
     contactsRepo.update(updatedContact);
     res.redirect('/contacts');
   }
 });
+
 
 
 
